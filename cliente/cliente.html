@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app='meuapp'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Página HTML</title>
+    <link rel="stylesheet" type="text/css" href="cliente.css" />
+    <script src="angular.min.js"></script>
+    <script src="cliente.js"></script>
+  </head>
+  <body>
+    <div id="mainWindow" 
+         ng-controller="meuapp" 
+         ng-init="isThereMessageFromServer = false">
+        <h1>Exemplo de uma página HTML</h1> <br />
+        <button ng-click="getRoute()">GET pro servidor</button>
+        <div id="contentFilledByServer" 
+             ng-class="{thereIsContent : isThereMessageFromServer,
+                        thereIsNotContent : !isThereMessageFromServer}">
+            <div ng-hide="isThereMessageFromServer">
+                GET não feito ainda!
+            </div>
+            <div ng-show="isThereMessageFromServer">
+                server respondeu: "{{datafromserver}}"
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+#mainWindow {
+	height: 500px;
+	width: 500px;
+	border-style: solid;
+	padding: 10px;
+}
+
+#contentFilledByServer {
+	display: flex;
+	margin-top: 20px; 
+	height: 300px;
+	border-style: solid;
+}
+
+#contentFilledByServer div {
+	margin: auto;
+}
+
+.thereIsNotContent {
+	border-color: red;
+}
+
+.thereIsContent {
+	border-color: green;
+}
